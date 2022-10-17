@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jdun0012/Assignment2.1/main/Occurance%20throughout%20the%20years.csv"
+  },
+  "title": "Recorded Occurrences of Bird Species within Australia over the Years",
+  "width": 600,
+  "height": 400,
+  "params": [
+    {
+      "name": "species_select",
+      "select": {"type": "point", "fields": ["Species_Name"]},
+      "bind": "legend"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Year", "type": "ordinal", "title": "Month of the year"},
+    "y": {
+      "field": "Number",
+      "type": "quantitative",
+      "title": "Recorded Occurrences"
+    },
+    "color": {
+      "field": "Species_Name",
+      "type": "nominal",
+      "title": "Species Name"
+    },
+    "opacity": {
+      "condition": {"param": "species_select", "value": 1},
+      "value": 0.2
+    },
+    "tooltip": [
+      {"field": "Species_Name"},
+      {"field": "Year"},
+      {"field": "Number"}
+    ]
+  },
+  "config": {}
+}

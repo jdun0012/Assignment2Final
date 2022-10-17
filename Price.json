@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jdun0012/Assignment2.1/main/Costs.csv"
+  },
+  "width": 500,
+  "height": 400,
+  "title": "Average Price of Bird Watching Equipment",
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Type",
+      "type": "nominal",
+      "title": "Type of Bird Watcher",
+      "sort": ["Casual", "Average", "Hardcore"]
+    },
+    "y": {"field": "Price", "type": "quantitative", "title": "Average Price ($AUS)"},
+    "color": {"field": "Equipment", "title": "Type of Equipment"},
+    "tooltip": [
+      {"field": "Equipment", "title": "Equipment"},
+      {"field": "Price"}
+    ]
+  },
+  "config": {}
+}

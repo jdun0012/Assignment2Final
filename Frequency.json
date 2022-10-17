@@ -1,0 +1,69 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 400,
+  "params": [
+    {
+      "name": "species_select",
+      "select": {"type": "point", "fields": ["Species Name"]},
+      "bind": "legend"
+    }
+  ],
+  "title": "Bird Species Frequency Within Australia Monthly",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jdun0012/Assignment2.1/main/Australian%20Presence%20Data.csv"
+  },
+  "mark": "circle",
+  "encoding": {
+    "x": {
+      "field": "Month",
+      "type": "ordinal",
+      "sort": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "June",
+        "July",
+        "Aug",
+        "Sept",
+        "Oct",
+        "Nov",
+        "Dec"
+      ]
+    },
+    "y": {"field": "Frequency", "type": "ordinal", "sort": ["C", "UC", "R"]},
+    "color": {
+      "field": "Species Name",
+      "scale": {
+        "domain": [
+          "Bar-tailed Godwit",
+          "Channel-billed Cuckoo",
+          "Common Sandpiper",
+          "Eurasian Whimbrel",
+          "Little Curlew",
+          "Red-Necked Stint"
+        ],
+        "range": [
+          "rgb(245, 221, 66)",
+          "rgb(120, 245, 66)",
+          "rgb(201, 46, 209)",
+          "rgb(92, 76, 71)",
+          "rgb(250, 110, 231)",
+          "rgb(193, 173, 240)"
+        ]
+      }
+    },
+    "opacity": {
+      "condition": {"param": "species_select", "value": 1},
+      "value": 0.2
+    },
+    "tooltip": [
+      {"field": "Species Name"},
+      {"field": "Month"},
+      {"field": "Frequency"}
+    ]
+  },
+  "config": {}
+}
