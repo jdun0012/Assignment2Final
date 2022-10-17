@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+    
+
+<head>
+
+    
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.4.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+
+    <script type="text/javascript">
+        var spec = "BirdHabitat.json";
+        vegaEmbed('#vline_chart', spec, {"actions": false});
+      </script>
+  
+
+    
+
+
+    <script src="vega_lite_vis.js"></script>
+
+    <title>Assignment 2</title>
+</head>
+<style>
+    
+    
+    .map1 {
+        position: absolute;
+        top: 700px;
+        right: 800px;
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+
+        
+    }
+  
+    
+    .map2 {
+        position: absolute;
+        top: 1200px;
+        right: 900px;
+        
+    }
+
+    .header{
+        margin: auto;
+        text-align: center;
+        font-size: 28px;
+    }
+    .AusDescript{
+        right: 400px;
+        
+        position: absolute;
+    }
+    .image1{
+        /*margin-left: 1000px;
+        margin-top: 100px;*/
+        /*top: 300px;
+        left: 30px;*/
+        position:absolute;
+        right: 300px;
+        top: 800px;
+        
+    }
+    .image2{
+        position:absolute;
+        right: -200px;
+        top: -1000px;
+        transform: scaleX(-1);
+    }
+
+    .image3{
+        position: relative;
+        top: 800px;
+        right: -300px;
+        transform: scaleX(-1);
+    }
+    .text1{
+        position: absolute;
+       /* margin-left: 800px;
+        margin-top: -500px;*/
+        border-style: groove;
+        top: 700px;
+        right: 100px;
+        
+    }
+    .testing1{
+        position: absolute;
+       /* margin-left: 300px;
+        margin-top: 500px;*/
+        top: 2500px;
+        right: 350px;
+       
+    }
+     
+    .testing2{
+        position: absolute;
+       /* margin-left: 300px;
+        margin-top: 500px;*/
+        top: 1000px;
+        right: 0px;
+    }
+
+    .testing3{
+        position: absolute;
+        top: 1000px;
+        right: -75px;
+    }
+
+    .text2 {
+        position: absolute;
+       /* margin-top: -600px;*/
+       top: -200px;
+       border-style: groove;
+       right: 100px;
+       font-size: 18px;
+    }
+    .container1{
+        position: absolute;
+        text-align: center;
+        border-style: solid;
+        font-size: 18px;
+        width: 1000px;
+        right: 250px;
+    }
+    .figure1{
+        
+     /*   margin-left: 150px;*/
+        position: absolute;
+        top: 1000px;
+        width: 500px;
+        border-style: groove;
+    }
+    .figure2{
+        
+       /* margin-left: 150px;*/
+        top: 1500px;
+        position: absolute;
+        width: 500px;
+        border-style: groove;
+        
+    }
+    .figure3{
+        position: absolute;
+       /* margin-left: 40px;*/
+        top: 500px;
+        right: 175px;
+        width: 500px;
+        border-style: groove;
+    }
+    .figure4{
+        position: absolute;
+        top: 500px;
+        right: 190px;
+        width: 500px;
+        border-style: groove;
+    }
+    .figure5{
+        
+        position: absolute;
+       /* margin-left: 40px;*/
+        top: 500px;
+        right: 250px;
+        width: 500px;
+        border-style: groove;
+    }
+    .imageSource1{
+      /*  margin-left: 800px;*/
+        position: absolute;
+        top: 1100px;
+        right: 150px;
+        width: 500px;
+        border-style: groove;
+    }
+    .imageSource2{
+      /*  margin-left: 800px;*/
+        position: absolute;
+        top: -550px;
+        right: -200px;
+        width: 500px;
+        border-style: groove;
+    }
+    .container2{
+        position: absolute;
+        top: 500px;
+        border-style: solid;
+        font-size: 18px;
+        width: 500px;
+        right: 500px;
+    }
+    .text3{
+        position: absolute;
+        top: 1400px;
+        right: 250px;
+        border-style: groove;
+
+    }
+    .text4{
+        position: absolute;
+        top: 850px;
+        right: 150px;
+        border-style: groove;
+
+    }
+    .imageSource3{
+        position: absolute;
+        top: 1600px;
+        right: -300px;
+        width: 400px;
+        border-style: groove;
+    }
+    .text5{
+        position: absolute;
+        top: 850px;
+        right: 50px;
+        border-style: groove;
+    }
+
+
+</style>
+
+
+<body>
+    <div class="header">
+        <h1>Bird Watchers Guide to Viewing Migratory Bird Species in Australia</h1>
+        <p>by James Dunstan 30588855</p>
+    </div>
+    
+    <div class="container1">
+        <p>Birds are fasinating creatures, as such, many individuals seek them out in order to spectate these wonderful creatures. This visulisation
+            brings you six unique bird species so that you can plan when and where to go to see these species yourselves!
+        </p>
+    </div>
+    <div class="container2">
+        <p>Below are two maps that display the habitats of where you can find these bird species in <b>Australia</b> and <b>Globally</b></p>
+    </div>
+    
+    
+    <div class="map1">
+        <div id="line_chart">
+           
+        </div>
+    </div>
+    
+        
+    </div>
+    
+    
+
+    <div class="figure1">
+        <p> Figure 1. A map of Australia and the habitat locations of different bird species. Clicking on the legend 
+            will highlight specific bird species on the map. </p>
+    </div>
+    
+    <div class="map2">
+        <div id="chart2">
+        </div>
+    </div>
+
+    <div class="text3">
+        <p>I wonder when my friends are available to meet up</p>
+    </div>
+
+    <div class="figure2">
+        <p>Figure 2. A map of the world and the migrational habitat locations of different bird species excluding Australia. Clicking on the legend 
+            will highlight specific bird species on the map</p>
+    </div>
+    <div class="imageSource1">
+        <p>Figure 6. Parrot with wing open, Image from https://pixabay.com/photos/parrot-yellow-macaw-bird-perched-3601194/</p>
+    </div>
+
+    <div class="image1">
+        <img src="parrot1.jpg" width="300", height="300">
+    </div>
+    <div class="text1">
+        <p>Squack! <b>Clicking</b> on the legend will <b>highlight</b> specific bird species on the map! Try it out!</p>
+    </div>
+    <div class = "testing1">
+        <div id="chart3">
+    </div>
+
+    <div class="image2">
+        <img src="crane.jpg" width="500", height="500" >
+    </div>
+    <div class="imageSource2">
+        <p>Figure 7. Crane looking down, Image from https://www.dreamstime.com/illustration/bird-binoculars.html</p>
+    </div>
+
+
+   <div class="text2">
+    <p>Some Australian birds migrate outside of Australia in order to breed. Below is a dot graph that reveals the frequency that Australian birds
+        can be found in Australia on a given month. In this graph, <b>"C"</b> stands for <b>Common</b>, <b>"UC"</b> stands for <b>Uncommon</b>, <b>"R"</b> for <b>Rare</b>.</p>
+   </div>
+   <div class="figure3">
+    <p>Figure 3. Dot Graph displaying the frequency of birds in Australia against months. Clicking on the legend will filter the dots to displaying
+        the specific bird species.
+    </p>
+  </div>
+  <div class="text4">
+    <p>If you think bird watching is an expensive hobby, think again! The cost for a casual bird watcher is cheap!</p>
+  </div>
+  <div class="image3">
+    <img src="shocked.png" width="300", height="300">
+</div>
+<div class="imageSource3">
+<p>Figure 8. Shocked Bird, Image from https://www.shutterstock.com/search/surprised-bird</p>
+</div>
+
+   <div class = "testing2">
+    <div id="chart4">
+  </div>
+  <div class="figure4">
+    <p>Figure 4. Stack Bar Graph showing the average price of bird watching equipment as well as the category that is associated with
+        that price range.
+    </p>
+  </div>
+ 
+
+ <div class="text5">
+    <p>Over the years, people have been documenting the occurrences of these species in the wild, have a look below, a higher occurrence record 
+        means that that bird will be particurly easier to find! </p>
+ </div>
+  <div class = "testing3">
+    <div id="chart5">
+  </div>
+  <div class="figure5">
+    <p>Figure 5. Stack Bar Graph displaying the recorded occurrences of bird species overtime. Clicking on the legend will highlight
+        specific bird species bars. </p>
+  </div>
+</body>
+</html>
